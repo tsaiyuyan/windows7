@@ -1,0 +1,47 @@
+參考網站
+http://dreambigou.blogspot.tw/2011/05/indowstimerresolution.html
+
+改變Ｗindows中的timer精確度--使用timeBeginPeriod(uPeriod) and timeEndPeriod(uPeriod)
+如果你想要實做一個週期是1ms的periodic timer，那麼os中的timer的精確度應該是多少？
+
+這個問題就好像是問如果你想用一隻尺去量一根頭髮的粗細，請問這隻尺的刻度應該為多少？
+
+這個問題困擾了我一陣子
+
+我想要在Windows XP上的實做一個period為1ms的periodic timer，我是用的是CreatTimerQueueTimer API。當我設定periodic為1ms,
+ 10ms, 15ms時，得到的平均period都是15ms。
+
+換句話說，更改了period卻沒有任何效果，1ms, 10ms and 15ms得到的都是15ms period，
+上網查了一下發現了windows的timer resoulstion約在10～25ms間（depends on different computer）
+( http://www.lucashale.com/timer-resolution/ )
+
+也就是說當你希望用一個最小刻度為15cm的尺去量1cm的昆蟲時，不管你怎麼量，量到的都會是15cm (minimum resolution)。
+
+這個事實告訴我們，如果你要使用高精確度的timer，首先必須使將系統的timer變成高精確的timer
+（至少resolution 要跟你所需要的resolution一樣），以我的case為例，我需要將系統的timer resolution改成1ms。
+
+查詢了msdn發現可以用timeBeginPeriod(resolution)和timeEndPeriod(resolutoin)來修改作業系統中的timer resolution。
+
+
+根據ｍｓｄｎ的說法，在使用timer之前，先使用timeBeginPeriod(resolution)來改變作業系統中的timer resolution，
+呼叫完之後就可以使用timer service。
+
+由於這個改變會globally change timer，也就是會改變整個作業系統中的timer，
+所以當使用完你所需要的timer service中應該再呼叫timeEndPeriod(resolution)來復原原先的timer resolution。
+
+有一段話值得注意：
+"Setting a higher resolution can improve the accuracy of time-out intervals in wait functions. However,
+ it can also reduce overall system performance, because the thread scheduler switches tasks more often.
+  High resolutions can also prevent the CPU power management system from entering power-saving modes.
+   Setting a higher resolution does not improve the accuracy of the high-resolution performance counter."
+
+中文：
+設定高精度的resolution可以改善wait function中的time-out interval的準確度。然而，這樣做可能會降低系統的笑同，
+因為thread scheduler會切換的更頻繁。
+
+高精確度的resolution可以是CPU的電源管理不要進入省電模式。
+
+設定高精確的resoution不會改善high-resolution performance counter的準確度（accuracy）。
+
+所以，使用timer時，如果發現量測出的period和所預期不同，有可能是你沒有改變os中的timer resolution所導致。
+記得在使用timer service之前和之後，使用timeBeginPeriod和timeEndPeriod來改變timer resolution
