@@ -12,8 +12,8 @@ int main (int argc,char *argv[])
 	wcout << L"wcout << 測試中文:一二三四" << endl;
 
 	//使用完畢時要呼叫下面兩行 ,才不會有 memory leak問題   <===重要
-	locale::global(std::locale("C"));
-	wcout.imbue(std::locale("C"));
+	locale::global(locale("C"));
+	wcout.imbue(locale("C"));
 
 
 	//===== 無使用 std::locale 會發生終端機打印時卡住
