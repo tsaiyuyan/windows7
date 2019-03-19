@@ -60,5 +60,13 @@ namespace LeetCodeTest
 			delete solution;
 			Logger::WriteMessage("test771() finish testing!\n");
 		}
+
+		TEST_METHOD(test937)
+		{
+			solution = new Solution_937_Reorder_Log_Files();
+			Assert::AreEqual(0, solution->test());
+			delete solution;
+			Logger::WriteMessage("test937() finish testing!\n");
+		}
 	};
 }

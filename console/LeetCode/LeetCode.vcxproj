@@ -82,6 +82,7 @@
     <ClInclude Include="575_Distribute_Candies.h" />
     <ClInclude Include="728_Self_Dividing_Numbersr.h" />
     <ClInclude Include="771_Jewels_and_Stones.h" />
+    <ClInclude Include="937_Reorder_Log_Files.h" />
     <ClInclude Include="define.h" />
     <ClInclude Include="SolutionList.h" />
   </ItemGroup>

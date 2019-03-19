@@ -36,6 +36,9 @@
     <ClInclude Include="575_Distribute_Candies.h">
       <Filter>Source Files</Filter>
     </ClInclude>
+    <ClInclude Include="937_Reorder_Log_Files.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
