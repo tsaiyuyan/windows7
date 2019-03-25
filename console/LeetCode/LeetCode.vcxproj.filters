@@ -15,28 +15,40 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="728_Self_Dividing_Numbersr.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="771_Jewels_and_Stones.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
     <ClInclude Include="SolutionList.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="561_Array_Partition_I.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="412_Fizz_Buzz.h">
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="define.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="575_Distribute_Candies.h">
+    <ClInclude Include="Solution_412_Fizz_Buzz.h">
       <Filter>Source Files</Filter>
     </ClInclude>
-    <ClInclude Include="937_Reorder_Log_Files.h">
+    <ClInclude Include="Solution_561_Array_Partition_I.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_575_Distribute_Candies.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_728_Self_Dividing_Numbersr.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_771_Jewels_and_Stones.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_937_Reorder_Log_Files.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_848_Shifting_Letters.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_680_Valid_Palindrome_II.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_125_Valid_Palindrome.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Solution_1008_Construct_Binary_Search_Tree_from_Preorder_Traversal.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>

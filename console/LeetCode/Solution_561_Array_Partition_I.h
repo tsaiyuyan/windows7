@@ -1,5 +1,3 @@
-#include "define.h"
-
 class Solution_561_Array_Partition_I:public Solution   //O(n) by using hashtable
 {
 public:

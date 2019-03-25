@@ -1,5 +1,3 @@
-#include "define.h"
-
 class Solution_412_Fizz_Buzz :public Solution //O(n) by using hashtable
 {
 public:

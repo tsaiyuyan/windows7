@@ -22,7 +22,13 @@ namespace LeetCodeTest
 			Logger::WriteMessage("solution destroy()\n");
 			
 		}
-
+		TEST_METHOD(test125)
+		{
+			solution = new Solution_125_Valid_Palindrome();
+			Assert::AreEqual(0, solution->test());
+			delete solution;
+			Logger::WriteMessage("test125() finish testing!\n");
+		}
 		TEST_METHOD(test412)
 		{
 			solution = new Solution_412_Fizz_Buzz();
@@ -30,7 +36,6 @@ namespace LeetCodeTest
 			delete solution;
 			Logger::WriteMessage("test412() finish testing!\n");
 		}
-
 		TEST_METHOD(test561)
 		{
 			solution = new Solution_561_Array_Partition_I();
@@ -38,13 +43,19 @@ namespace LeetCodeTest
 			delete solution;
 			Logger::WriteMessage("test561() finish testing!\n");
 		}
-
 		TEST_METHOD(test575)
 		{
 			solution = new Solution_575_Distribute_Candies();
 			Assert::AreEqual(0, solution->test());
 			delete solution;
 			Logger::WriteMessage("test575() finish testing!\n");
+		}
+		TEST_METHOD(test680)
+		{
+			solution = new Solution_680_Valid_Palindrome_II();
+			Assert::AreEqual(0, solution->test());
+			delete solution;
+			Logger::WriteMessage("test680() finish testing!\n");
 		}
 		TEST_METHOD(test728)
 		{
@@ -60,6 +71,13 @@ namespace LeetCodeTest
 			delete solution;
 			Logger::WriteMessage("test771() finish testing!\n");
 		}
+		TEST_METHOD(test848)
+		{
+			solution = new Solution_848_Shifting_Letters();
+			Assert::AreEqual(0, solution->test());
+			delete solution;
+			Logger::WriteMessage("test848() finish testing!\n");
+		}
 
 		TEST_METHOD(test937)
 		{
@@ -67,6 +85,13 @@ namespace LeetCodeTest
 			Assert::AreEqual(0, solution->test());
 			delete solution;
 			Logger::WriteMessage("test937() finish testing!\n");
+		}			
+		TEST_METHOD(test1008)
+		{
+			solution = new Solution_1008_Construct_Binary_Search_Tree_from_Preorder_Traversal();
+			Assert::AreEqual(0, solution->test());
+			delete solution;
+			Logger::WriteMessage("test1008() finish testing!\n");
 		}
 	};
 }
