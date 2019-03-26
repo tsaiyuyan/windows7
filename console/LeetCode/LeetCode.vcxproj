@@ -89,6 +89,7 @@
     <ClInclude Include="Solution_771_Jewels_and_Stones.h" />
     <ClInclude Include="Solution_848_Shifting_Letters.h" />
     <ClInclude Include="Solution_937_Reorder_Log_Files.h" />
+    <ClInclude Include="Solution_980_Unique_Paths_III.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />

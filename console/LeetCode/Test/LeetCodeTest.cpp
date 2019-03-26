@@ -85,7 +85,15 @@ namespace LeetCodeTest
 			Assert::AreEqual(0, solution->test());
 			delete solution;
 			Logger::WriteMessage("test937() finish testing!\n");
-		}			
+		}
+		
+		TEST_METHOD(test980)
+		{
+			solution = new Solution_980_Unique_Paths_III();
+			Assert::AreEqual(0, solution->test());
+			delete solution;
+			Logger::WriteMessage("test980() finish testing!\n");
+		}
 		TEST_METHOD(test1008)
 		{
 			solution = new Solution_1008_Construct_Binary_Search_Tree_from_Preorder_Traversal();
