@@ -12,7 +12,7 @@ using namespace std;
 #pragma comment(lib, "Ws2_32.lib")
 #pragma comment(lib, "IPHLPAPI.lib")
 
-#ifdef _MSC_VER <= 1400 //MSVC++ 8.0  _MSC_VER == 1400 (Visual Studio 2005)   表示低於 VS2005 要補上此函式
+#if (_MSC_VER <= 1400) //MSVC++ 8.0  _MSC_VER == 1400 (Visual Studio 2005)   表示低於 VS2005 要補上此函式
 const char *inet_ntop(int af, const void *src, char *dst, socklen_t size) //vs2005 need ,vs2008 plus not need
 {
 	struct sockaddr_storage ss;
